@@ -1,0 +1,809 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #faf8f5;
+  color: #18181b;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand,
+.hero-motto {
+  font-family: "Syne", system-ui, -apple-system, sans-serif;
+}
+
+.section-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b8892d;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  color: #52525b;
+  font-size: 0.975rem;
+}
+
+.btn-gold {
+  background-color: #b8892d;
+  border: 1px solid #b8892d;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.55rem;
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+  background-color: #9e7322;
+  border-color: #9e7322;
+  color: #ffffff;
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  border: 1px solid #b8892d;
+  color: #b8892d;
+  font-weight: 600;
+  border-radius: 0.55rem;
+  transition: all 0.18s ease;
+}
+
+.btn-outline-gold:hover,
+.btn-outline-gold:focus {
+  background-color: #b8892d;
+  border-color: #b8892d;
+  color: #ffffff;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e7e2d9;
+  padding: 0.85rem 0;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.navbar .navbar-brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #18181b;
+  letter-spacing: -0.02em;
+}
+
+.navbar .navbar-brand .brand-emblem {
+  flex-shrink: 0;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  color: #52525b;
+  padding: 0.5rem 0.9rem;
+  transition: color 0.18s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #b8892d;
+}
+
+.navbar .btn-ambience {
+  background-color: #faf8f5;
+  color: #18181b;
+  border: 1px solid #e7e2d9;
+  border-radius: 9999px;
+  padding: 0.45rem 1.05rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.18s ease;
+}
+
+.navbar .btn-ambience:hover {
+  border-color: #b8892d;
+  color: #b8892d;
+}
+
+.hero-section .hero-motto {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #b8892d;
+}
+
+.hero-section .hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.hero-section .hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #52525b;
+  max-width: 39rem;
+}
+
+.hero-section .hero-visual {
+  max-width: 460px;
+  width: 100%;
+  border-radius: 1.35rem;
+  box-shadow: 0 22px 44px rgba(24, 24, 27, 0.16);
+}
+
+.rates-shell {
+  background-color: #ffffff;
+  border: 1px solid #e7e2d9;
+  border-radius: 1.35rem;
+  box-shadow: 0 12px 30px rgba(24, 24, 27, 0.05);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.rates-note {
+  font-size: 0.9rem;
+  color: #52525b;
+}
+
+.status-badge {
+  font-size: 0.78rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.status-badge.status-live {
+  background-color: rgba(22, 163, 74, 0.15);
+  color: #16a34a;
+}
+
+.status-badge.status-fallback {
+  background-color: rgba(184, 137, 45, 0.18);
+  color: #b8892d;
+}
+
+.rate-timestamp {
+  font-size: 0.82rem;
+  color: #52525b;
+}
+
+.metal-tabs .nav-link {
+  background-color: #faf8f5;
+  color: #18181b;
+  border: 1px solid #e7e2d9;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.15rem;
+  transition: all 0.18s ease;
+}
+
+.metal-tabs .nav-link.active,
+.metal-tabs .nav-link:hover {
+  background-color: #b8892d;
+  border-color: #b8892d;
+  color: #ffffff;
+}
+
+.rate-card {
+  background-color: #faf8f5;
+  border: 1px solid #e7e2d9;
+  border-radius: 0.95rem;
+  padding: 1.15rem;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.rate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(24, 24, 27, 0.08);
+  border-color: #b8892d;
+}
+
+.rate-card .rate-purity {
+  font-family: "Syne", system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.rate-card .rate-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #b8892d;
+  margin-bottom: 0.85rem;
+}
+
+.rate-card .rate-metric {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  border-top: 1px dashed rgba(148, 163, 184, 0.25);
+}
+
+.rate-card .rate-metric .rate-unit-label {
+  font-size: 0.82rem;
+  color: #52525b;
+}
+
+.rate-card .rate-metric .rate-value {
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.filter-group .btn-filter {
+  background-color: #ffffff;
+  color: #18181b;
+  border: 1px solid #e7e2d9;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.48rem 0.95rem;
+  transition: all 0.18s ease;
+}
+
+.filter-group .btn-filter.active,
+.filter-group .btn-filter:hover {
+  background-color: #b8892d;
+  border-color: #b8892d;
+  color: #ffffff;
+}
+
+.sort-select {
+  width: auto;
+  min-width: 195px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #e7e2d9;
+  border-radius: 0.95rem;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(24, 24, 27, 0.1);
+  border-color: #b8892d;
+}
+
+.product-card .product-visual-wrap {
+  background-color: #faf8f5;
+  border-bottom: 1px solid #e7e2d9;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 170px;
+}
+
+.product-card .product-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.product-card .product-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 9999px;
+  background-color: rgba(184, 137, 45, 0.14);
+  color: #b8892d;
+  margin-bottom: 0.7rem;
+}
+
+.product-card .product-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.product-card .product-meta-text {
+  font-size: 0.86rem;
+  color: #52525b;
+  margin-bottom: 1rem;
+}
+
+.product-card .product-footer {
+  margin-top: auto;
+  padding-top: 0.95rem;
+  border-top: 1px solid #e7e2d9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.product-card .product-footer .product-price {
+  font-family: "Syne", system-ui, -apple-system, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.product-card .product-footer .product-price-note {
+  display: block;
+  font-size: 0.72rem;
+  color: #52525b;
+}
+
+.modal-content {
+  border-radius: 1.35rem;
+  border: 1px solid #e7e2d9;
+}
+
+.badge-metal-meta {
+  background-color: rgba(184, 137, 45, 0.16);
+  color: #b8892d;
+  font-weight: 600;
+}
+
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e7e2d9;
+  font-size: 0.95rem;
+}
+
+.breakdown-row.breakdown-total {
+  border-bottom: none;
+  padding-top: 1rem;
+  font-size: 1.12rem;
+  color: #b8892d;
+}
+
+.booking-section .booking-card {
+  background-color: #ffffff;
+  border: 1px solid #e7e2d9;
+  border-radius: 1.35rem;
+  box-shadow: 0 12px 32px rgba(24, 24, 27, 0.06);
+}
+
+.booking-section .form-hint {
+  color: #52525b;
+}
+
+.booking-section .form-control.is-invalid,
+.booking-section .form-select.is-invalid {
+  border-color: #dc2626;
+}
+
+.booking-section .form-control.is-valid,
+.booking-section .form-select.is-valid {
+  border-color: #16a34a;
+}
+
+.booking-section .invalid-feedback {
+  color: #dc2626;
+  font-size: 0.83rem;
+  font-weight: 500;
+}
+
+.booking-section .booking-success-alert {
+  background-color: rgba(22, 163, 74, 0.12);
+  border: 1px solid #16a34a;
+  color: #16a34a;
+  border-radius: 0.55rem;
+  padding: 0.95rem 1.15rem;
+  font-weight: 500;
+}
+
+.site-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e7e2d9;
+}
+
+.site-footer .footer-muted {
+  color: #52525b;
+}
+
+.site-footer .footer-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #18181b;
+  padding: 0 0.45rem;
+  transition: color 0.18s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: #b8892d;
+}
+
+body[data-theme="champagne"] {
+  background-color: #f5ecdc;
+  color: #2c2219;
+}
+
+body[data-theme="champagne"] .navbar {
+  background-color: #fcf7ee;
+  border-bottom-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .navbar .navbar-brand,
+body[data-theme="champagne"] .navbar .nav-link {
+  color: #2c2219;
+}
+
+body[data-theme="champagne"] .navbar .nav-link:hover {
+  color: #b8892d;
+}
+
+body[data-theme="champagne"] .navbar .btn-ambience {
+  background-color: #f5ecdc;
+  color: #2c2219;
+  border-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .navbar .btn-ambience:hover {
+  border-color: #b8892d;
+  color: #b8892d;
+}
+
+body[data-theme="champagne"] .hero-subtitle,
+body[data-theme="champagne"] .rates-note,
+body[data-theme="champagne"] .rate-timestamp,
+body[data-theme="champagne"] .section-subtitle,
+body[data-theme="champagne"] .form-hint,
+body[data-theme="champagne"] .footer-muted,
+body[data-theme="champagne"] .product-meta-text {
+  color: #6b5845;
+}
+
+body[data-theme="champagne"] .rates-shell,
+body[data-theme="champagne"] .rate-card,
+body[data-theme="champagne"] .product-card,
+body[data-theme="champagne"] .booking-card,
+body[data-theme="champagne"] .modal-content,
+body[data-theme="champagne"] .site-footer {
+  background-color: #fcf7ee;
+  color: #2c2219;
+  border-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .rate-card {
+  background-color: #f5ecdc;
+}
+
+body[data-theme="champagne"] .rate-card .rate-unit-label {
+  color: #6b5845;
+}
+
+body[data-theme="champagne"] .product-card .product-visual-wrap {
+  background-color: #f5ecdc;
+  border-bottom-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .product-card .product-footer {
+  border-top-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .metal-tabs .nav-link {
+  background-color: #f5ecdc;
+  color: #2c2219;
+  border-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .metal-tabs .nav-link.active,
+body[data-theme="champagne"] .metal-tabs .nav-link:hover {
+  background-color: #b8892d;
+  border-color: #b8892d;
+  color: #ffffff;
+}
+
+body[data-theme="champagne"] .filter-group .btn-filter {
+  background-color: #fcf7ee;
+  color: #2c2219;
+  border-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .filter-group .btn-filter.active,
+body[data-theme="champagne"] .filter-group .btn-filter:hover {
+  background-color: #b8892d;
+  border-color: #b8892d;
+  color: #ffffff;
+}
+
+body[data-theme="champagne"] .form-control,
+body[data-theme="champagne"] .form-select {
+  background-color: #f5ecdc;
+  color: #2c2219;
+  border-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .form-control::placeholder,
+body[data-theme="champagne"] .form-select::placeholder {
+  color: #6b5845;
+}
+
+body[data-theme="champagne"] .form-control:focus,
+body[data-theme="champagne"] .form-select:focus {
+  background-color: #f5ecdc;
+  color: #2c2219;
+  border-color: #b8892d;
+  box-shadow: 0 0 0 0.2rem rgba(184, 137, 45, 0.22);
+}
+
+body[data-theme="champagne"] .modal-header,
+body[data-theme="champagne"] .modal-footer,
+body[data-theme="champagne"] .breakdown-row {
+  border-color: #dfd0b8;
+}
+
+body[data-theme="champagne"] .site-footer a {
+  color: #2c2219;
+}
+
+body[data-theme="champagne"] .site-footer a:hover {
+  color: #b8892d;
+}
+
+body[data-theme="velvet"] {
+  background-color: #121215;
+  color: #f4f1ea;
+}
+
+body[data-theme="velvet"] .navbar {
+  background-color: #1b1b20;
+  border-bottom-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .navbar .navbar-brand,
+body[data-theme="velvet"] .navbar .nav-link {
+  color: #f4f1ea;
+}
+
+body[data-theme="velvet"] .navbar .nav-link:hover {
+  color: #b8892d;
+}
+
+body[data-theme="velvet"] .navbar .btn-ambience {
+  background-color: #121215;
+  color: #f4f1ea;
+  border-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .navbar .btn-ambience:hover {
+  border-color: #b8892d;
+  color: #b8892d;
+}
+
+body[data-theme="velvet"] .hero-subtitle,
+body[data-theme="velvet"] .rates-note,
+body[data-theme="velvet"] .rate-timestamp,
+body[data-theme="velvet"] .section-subtitle,
+body[data-theme="velvet"] .form-hint,
+body[data-theme="velvet"] .footer-muted,
+body[data-theme="velvet"] .product-meta-text {
+  color: #a6a095;
+}
+
+body[data-theme="velvet"] .rates-shell,
+body[data-theme="velvet"] .rate-card,
+body[data-theme="velvet"] .product-card,
+body[data-theme="velvet"] .booking-card,
+body[data-theme="velvet"] .modal-content,
+body[data-theme="velvet"] .site-footer {
+  background-color: #1b1b20;
+  color: #f4f1ea;
+  border-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .rate-card {
+  background-color: #121215;
+}
+
+body[data-theme="velvet"] .rate-card .rate-unit-label {
+  color: #a6a095;
+}
+
+body[data-theme="velvet"] .product-card .product-visual-wrap {
+  background-color: #121215;
+  border-bottom-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .product-card .product-footer {
+  border-top-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .metal-tabs .nav-link {
+  background-color: #121215;
+  color: #f4f1ea;
+  border-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .metal-tabs .nav-link.active,
+body[data-theme="velvet"] .metal-tabs .nav-link:hover {
+  background-color: #b8892d;
+  border-color: #b8892d;
+  color: #ffffff;
+}
+
+body[data-theme="velvet"] .filter-group .btn-filter {
+  background-color: #1b1b20;
+  color: #f4f1ea;
+  border-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .filter-group .btn-filter.active,
+body[data-theme="velvet"] .filter-group .btn-filter:hover {
+  background-color: #b8892d;
+  border-color: #b8892d;
+  color: #ffffff;
+}
+
+body[data-theme="velvet"] .form-control,
+body[data-theme="velvet"] .form-select {
+  background-color: #121215;
+  color: #f4f1ea;
+  border-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .form-control::placeholder,
+body[data-theme="velvet"] .form-select::placeholder {
+  color: #a6a095;
+}
+
+body[data-theme="velvet"] .form-control:focus,
+body[data-theme="velvet"] .form-select:focus {
+  background-color: #121215;
+  color: #f4f1ea;
+  border-color: #b8892d;
+  box-shadow: 0 0 0 0.2rem rgba(184, 137, 45, 0.22);
+}
+
+body[data-theme="velvet"] .modal-header,
+body[data-theme="velvet"] .modal-footer,
+body[data-theme="velvet"] .breakdown-row {
+  border-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .site-footer a {
+  color: #f4f1ea;
+}
+
+body[data-theme="velvet"] .site-footer a:hover {
+  color: #b8892d;
+}
+
+body[data-theme="velvet"] .navbar .navbar-toggler {
+  border-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .navbar .navbar-toggler-icon {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+body[data-theme="velvet"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+body[data-theme="velvet"] .section-eyebrow,
+body[data-theme="velvet"] .hero-motto,
+body[data-theme="velvet"] .rate-card .rate-tag,
+body[data-theme="velvet"] .product-card .product-badge,
+body[data-theme="velvet"] .badge-metal-meta,
+body[data-theme="velvet"] .breakdown-row.breakdown-total {
+  color: #e5c171;
+}
+
+body[data-theme="velvet"] .product-card:hover {
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.48);
+}
+
+body[data-theme="velvet"] .booking-section .booking-success-alert {
+  background-color: rgba(34, 197, 94, 0.16);
+  color: #86efac;
+}
+
+@media (max-width: 992px) {
+  .hero-section .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-section .hero-visual {
+    max-width: 380px;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .catalog-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .hero-section .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 0.96rem;
+  }
+
+  .rates-shell {
+    padding: 1.25rem !important;
+  }
+
+  .rate-card {
+    padding: 1rem;
+  }
+
+  .catalog-controls {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .catalog-controls .filter-group {
+    width: 100%;
+  }
+
+  .catalog-controls .filter-group .btn-filter {
+    flex: 1 1 auto;
+    padding: 0.45rem 0.5rem;
+    font-size: 0.82rem;
+  }
+
+  .catalog-controls .sort-select {
+    width: 100%;
+  }
+
+  .product-card .product-body {
+    padding: 1.05rem;
+  }
+
+  .product-card .product-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-card .product-footer .btn {
+    width: 100%;
+  }
+}

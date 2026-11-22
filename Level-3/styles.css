@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: #faf8f5;
+  color: #18181b;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e7e2d9;
+  padding: 16px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  display: block;
+}
+
+.brand-motto {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #b8892d;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.panel {
+  background-color: #ffffff;
+  border: 1px solid #e7e2d9;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.muted {
+  color: #52525b;
+  font-size: 0.9rem;
+  margin: 4px 0 0 0;
+}
+
+.btn-ambience,
+.btn-primary {
+  background-color: #b8892d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #b8892d;
+  border: 1px solid #b8892d;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rates-grid,
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background-color: #faf8f5;
+  border: 1px solid #e7e2d9;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b8892d;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  margin: 6px 0;
+  font-size: 1.05rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #d4cfc5;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input.invalid,
+.form-group select.invalid {
+  border-color: #dc2626;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+.success-banner {
+  margin-top: 14px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.site-footer {
+  margin: 32px 0;
+  font-size: 0.9rem;
+}
+
+body[data-theme="velvet"] .site-header,
+body[data-theme="velvet"] .panel {
+  background-color: #1b1b20;
+  border-color: #2e2d35;
+}
+
+body[data-theme="velvet"] .card {
+  background-color: #121215;
+  border-color: #2e2d35;
+}
+
+@media (max-width: 900px) {
+  .rates-grid,
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .rates-grid,
+  .catalog-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

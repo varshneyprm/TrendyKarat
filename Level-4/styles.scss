@@ -1,0 +1,784 @@
+// ============================================================================
+// Trendy Karat — Sass Variables
+// ============================================================================
+$gold-primary: #b8892d;
+$gold-bright: #e5c171;
+
+$ivory-bg: #faf8f5;
+$ivory-card: #ffffff;
+$ivory-text: #18181b;
+$ivory-muted: #52525b;
+$ivory-border: #e7e2d9;
+
+$champagne-bg: #f5ecdc;
+$champagne-card: #fcf7ee;
+$champagne-text: #2c2219;
+$champagne-muted: #6b5845;
+$champagne-border: #dfd0b8;
+
+$velvet-bg: #121215;
+$velvet-card: #1b1b20;
+$velvet-text: #f4f1ea;
+$velvet-muted: #a6a095;
+$velvet-border: #2e2d35;
+
+$error-red: #dc2626;
+$success-green: #16a34a;
+
+$font-heading: "Syne", system-ui, -apple-system, sans-serif;
+$font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+$radius-sm: 0.55rem;
+$radius-md: 0.95rem;
+$radius-lg: 1.35rem;
+$radius-pill: 9999px;
+
+$transition-fast: 0.18s ease;
+$transition-base: 0.25s ease;
+
+// ============================================================================
+// Reusable Mixins
+// ============================================================================
+@mixin card-hover-lift($lift: -5px, $shadow: 0 16px 32px rgba(24, 24, 27, 0.1)) {
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    transform: translateY($lift);
+    box-shadow: $shadow;
+    border-color: $gold-primary;
+  }
+}
+
+@mixin theme-surface($bg, $card, $text, $muted, $border) {
+  background-color: $bg;
+  color: $text;
+
+  .navbar {
+    background-color: $card;
+    border-bottom-color: $border;
+
+    .navbar-brand,
+    .nav-link {
+      color: $text;
+    }
+
+    .nav-link:hover {
+      color: $gold-primary;
+    }
+
+    .btn-ambience {
+      background-color: $bg;
+      color: $text;
+      border-color: $border;
+
+      &:hover {
+        border-color: $gold-primary;
+        color: $gold-primary;
+      }
+    }
+  }
+
+  .hero-subtitle,
+  .rates-note,
+  .rate-timestamp,
+  .section-subtitle,
+  .form-hint,
+  .footer-muted,
+  .product-meta-text {
+    color: $muted;
+  }
+
+  .rates-shell,
+  .rate-card,
+  .product-card,
+  .booking-card,
+  .modal-content,
+  .site-footer {
+    background-color: $card;
+    color: $text;
+    border-color: $border;
+  }
+
+  .rate-card {
+    background-color: $bg;
+
+    .rate-unit-label {
+      color: $muted;
+    }
+  }
+
+  .product-card {
+    .product-visual-wrap {
+      background-color: $bg;
+      border-bottom-color: $border;
+    }
+
+    .product-footer {
+      border-top-color: $border;
+    }
+  }
+
+  .metal-tabs {
+    .nav-link {
+      background-color: $bg;
+      color: $text;
+      border-color: $border;
+
+      &.active,
+      &:hover {
+        background-color: $gold-primary;
+        border-color: $gold-primary;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .filter-group {
+    .btn-filter {
+      background-color: $card;
+      color: $text;
+      border-color: $border;
+
+      &.active,
+      &:hover {
+        background-color: $gold-primary;
+        border-color: $gold-primary;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .form-control,
+  .form-select {
+    background-color: $bg;
+    color: $text;
+    border-color: $border;
+
+    &::placeholder {
+      color: $muted;
+    }
+
+    &:focus {
+      background-color: $bg;
+      color: $text;
+      border-color: $gold-primary;
+      box-shadow: 0 0 0 0.2rem rgba(184, 137, 45, 0.22);
+    }
+  }
+
+  .modal-header,
+  .modal-footer,
+  .breakdown-row {
+    border-color: $border;
+  }
+
+  .site-footer {
+    a {
+      color: $text;
+
+      &:hover {
+        color: $gold-primary;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// Base Styles (Ivory Light Default)
+// ============================================================================
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  background-color: $ivory-bg;
+  color: $ivory-text;
+  transition: background-color $transition-base, color $transition-base;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand,
+.hero-motto {
+  font-family: $font-heading;
+}
+
+.section-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $gold-primary;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  color: $ivory-muted;
+  font-size: 0.975rem;
+}
+
+.btn-gold {
+  background-color: $gold-primary;
+  border: 1px solid $gold-primary;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: $radius-sm;
+  transition: background-color $transition-fast, transform $transition-fast;
+
+  &:hover,
+  &:focus {
+    background-color: #9e7322;
+    border-color: #9e7322;
+    color: #ffffff;
+  }
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  border: 1px solid $gold-primary;
+  color: $gold-primary;
+  font-weight: 600;
+  border-radius: $radius-sm;
+  transition: all $transition-fast;
+
+  &:hover,
+  &:focus {
+    background-color: $gold-primary;
+    border-color: $gold-primary;
+    color: #ffffff;
+  }
+}
+
+// ============================================================================
+// Navbar
+// ============================================================================
+.navbar {
+  background-color: $ivory-card;
+  border-bottom: 1px solid $ivory-border;
+  padding: 0.85rem 0;
+  transition: background-color $transition-base, border-color $transition-base;
+
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 1.35rem;
+    color: $ivory-text;
+    letter-spacing: -0.02em;
+
+    .brand-emblem {
+      flex-shrink: 0;
+    }
+  }
+
+  .nav-link {
+    font-weight: 500;
+    color: $ivory-muted;
+    padding: 0.5rem 0.9rem;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $gold-primary;
+    }
+  }
+
+  .btn-ambience {
+    background-color: $ivory-bg;
+    color: $ivory-text;
+    border: 1px solid $ivory-border;
+    border-radius: $radius-pill;
+    padding: 0.45rem 1.05rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all $transition-fast;
+
+    &:hover {
+      border-color: $gold-primary;
+      color: $gold-primary;
+    }
+  }
+}
+
+// ============================================================================
+// Hero Section
+// ============================================================================
+.hero-section {
+  .hero-motto {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: $gold-primary;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: $ivory-muted;
+    max-width: 39rem;
+  }
+
+  .hero-visual {
+    max-width: 460px;
+    width: 100%;
+    border-radius: $radius-lg;
+    box-shadow: 0 22px 44px rgba(24, 24, 27, 0.16);
+  }
+}
+
+// ============================================================================
+// Live Rates Board
+// ============================================================================
+.rates-shell {
+  background-color: $ivory-card;
+  border: 1px solid $ivory-border;
+  border-radius: $radius-lg;
+  box-shadow: 0 12px 30px rgba(24, 24, 27, 0.05);
+  transition: background-color $transition-base, border-color $transition-base;
+}
+
+.rates-note {
+  font-size: 0.9rem;
+  color: $ivory-muted;
+}
+
+.status-badge {
+  font-size: 0.78rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: $radius-pill;
+  font-weight: 600;
+
+  &.status-live {
+    background-color: rgba(22, 163, 74, 0.15);
+    color: $success-green;
+  }
+
+  &.status-fallback {
+    background-color: rgba(184, 137, 45, 0.18);
+    color: $gold-primary;
+  }
+}
+
+.rate-timestamp {
+  font-size: 0.82rem;
+  color: $ivory-muted;
+}
+
+.metal-tabs {
+  .nav-link {
+    background-color: $ivory-bg;
+    color: $ivory-text;
+    border: 1px solid $ivory-border;
+    border-radius: $radius-pill;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.15rem;
+    transition: all $transition-fast;
+
+    &.active,
+    &:hover {
+      background-color: $gold-primary;
+      border-color: $gold-primary;
+      color: #ffffff;
+    }
+  }
+}
+
+.rate-card {
+  background-color: $ivory-bg;
+  border: 1px solid $ivory-border;
+  border-radius: $radius-md;
+  padding: 1.15rem;
+  height: 100%;
+  @include card-hover-lift(-4px, 0 12px 24px rgba(24, 24, 27, 0.08));
+
+  .rate-purity {
+    font-family: $font-heading;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+  }
+
+  .rate-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $gold-primary;
+    margin-bottom: 0.85rem;
+  }
+
+  .rate-metric {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    border-top: 1px dashed rgba(148, 163, 184, 0.25);
+
+    .rate-unit-label {
+      font-size: 0.82rem;
+      color: $ivory-muted;
+    }
+
+    .rate-value {
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+  }
+}
+
+// ============================================================================
+// Dynamic Collection & Product Cards
+// ============================================================================
+.filter-group {
+  .btn-filter {
+    background-color: $ivory-card;
+    color: $ivory-text;
+    border: 1px solid $ivory-border;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.48rem 0.95rem;
+    transition: all $transition-fast;
+
+    &.active,
+    &:hover {
+      background-color: $gold-primary;
+      border-color: $gold-primary;
+      color: #ffffff;
+    }
+  }
+}
+
+.sort-select {
+  width: auto;
+  min-width: 195px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.product-card {
+  background-color: $ivory-card;
+  border: 1px solid $ivory-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @include card-hover-lift();
+
+  .product-visual-wrap {
+    background-color: $ivory-bg;
+    border-bottom: 1px solid $ivory-border;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+  }
+
+  .product-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .product-badge {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.65rem;
+    border-radius: $radius-pill;
+    background-color: rgba(184, 137, 45, 0.14);
+    color: $gold-primary;
+    margin-bottom: 0.7rem;
+  }
+
+  .product-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .product-meta-text {
+    font-size: 0.86rem;
+    color: $ivory-muted;
+    margin-bottom: 1rem;
+  }
+
+  .product-footer {
+    margin-top: auto;
+    padding-top: 0.95rem;
+    border-top: 1px solid $ivory-border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+
+    .product-price {
+      font-family: $font-heading;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .product-price-note {
+      display: block;
+      font-size: 0.72rem;
+      color: $ivory-muted;
+    }
+  }
+}
+
+// ============================================================================
+// Price Breakdown Modal
+// ============================================================================
+.modal-content {
+  border-radius: $radius-lg;
+  border: 1px solid $ivory-border;
+}
+
+.badge-metal-meta {
+  background-color: rgba(184, 137, 45, 0.16);
+  color: $gold-primary;
+  font-weight: 600;
+}
+
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid $ivory-border;
+  font-size: 0.95rem;
+
+  &.breakdown-total {
+    border-bottom: none;
+    padding-top: 1rem;
+    font-size: 1.12rem;
+    color: $gold-primary;
+  }
+}
+
+// ============================================================================
+// Booking Form Section
+// ============================================================================
+.booking-section {
+  .booking-card {
+    background-color: $ivory-card;
+    border: 1px solid $ivory-border;
+    border-radius: $radius-lg;
+    box-shadow: 0 12px 32px rgba(24, 24, 27, 0.06);
+  }
+
+  .form-hint {
+    color: $ivory-muted;
+  }
+
+  .form-control.is-invalid,
+  .form-select.is-invalid {
+    border-color: $error-red;
+  }
+
+  .form-control.is-valid,
+  .form-select.is-valid {
+    border-color: $success-green;
+  }
+
+  .invalid-feedback {
+    color: $error-red;
+    font-size: 0.83rem;
+    font-weight: 500;
+  }
+
+  .booking-success-alert {
+    background-color: rgba(22, 163, 74, 0.12);
+    border: 1px solid $success-green;
+    color: $success-green;
+    border-radius: $radius-sm;
+    padding: 0.95rem 1.15rem;
+    font-weight: 500;
+  }
+}
+
+// ============================================================================
+// Footer
+// ============================================================================
+.site-footer {
+  background-color: $ivory-card;
+  border-top: 1px solid $ivory-border;
+
+  .footer-muted {
+    color: $ivory-muted;
+  }
+
+  .footer-links {
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      color: $ivory-text;
+      padding: 0 0.45rem;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $gold-primary;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// Theme Overrides: Champagne Warm & Royal Velvet Dark
+// ============================================================================
+body[data-theme="champagne"] {
+  @include theme-surface($champagne-bg, $champagne-card, $champagne-text, $champagne-muted, $champagne-border);
+}
+
+body[data-theme="velvet"] {
+  @include theme-surface($velvet-bg, $velvet-card, $velvet-text, $velvet-muted, $velvet-border);
+
+  .navbar {
+    .navbar-toggler {
+      border-color: $velvet-border;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1) grayscale(100%) brightness(200%);
+    }
+  }
+
+  .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+  }
+
+  .section-eyebrow,
+  .hero-motto,
+  .rate-card .rate-tag,
+  .product-card .product-badge,
+  .badge-metal-meta,
+  .breakdown-row.breakdown-total {
+    color: $gold-bright;
+  }
+
+  .product-card {
+    &:hover {
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.48);
+    }
+  }
+
+  .booking-section {
+    .booking-success-alert {
+      background-color: rgba(34, 197, 94, 0.16);
+      color: #86efac;
+    }
+  }
+}
+
+// ============================================================================
+// Responsive Media Queries
+// ============================================================================
+@media (max-width: 992px) {
+  .hero-section {
+    .hero-title {
+      font-size: 2.35rem;
+    }
+
+    .hero-visual {
+      max-width: 380px;
+    }
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .catalog-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+
+    .hero-title {
+      font-size: 1.85rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.96rem;
+    }
+  }
+
+  .rates-shell {
+    padding: 1.25rem !important;
+  }
+
+  .rate-card {
+    padding: 1rem;
+  }
+
+  .catalog-controls {
+    flex-direction: column;
+    align-items: stretch !important;
+
+    .filter-group {
+      width: 100%;
+
+      .btn-filter {
+        flex: 1 1 auto;
+        padding: 0.45rem 0.5rem;
+        font-size: 0.82rem;
+      }
+    }
+
+    .sort-select {
+      width: 100%;
+    }
+  }
+
+  .product-card {
+    .product-body {
+      padding: 1.05rem;
+    }
+
+    .product-footer {
+      flex-direction: column;
+      align-items: stretch;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Param Varshney">
+  <title>Trendy Karat — Wear the Asset | Level 3</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-theme="ivory">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <span class="brand-name">Trendy Karat</span>
+        <span class="brand-motto">Wear the Asset</span>
+      </div>
+      <button id="themeToggleBtn" type="button" class="btn-ambience">
+        Ambience: Ivory Light
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Live API Bullion Rate Board -->
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <h2>Today's Live Bullion Rates (Excl. GST &amp; Making)</h2>
+          <p id="rateStatus" class="muted">Fetching live INR rates from gold-api.com...</p>
+        </div>
+        <button id="refreshRatesBtn" type="button" class="btn-outline">Refresh Rates</button>
+      </div>
+      <div id="ratesGrid" class="rates-grid"></div>
+    </section>
+
+    <!-- Dynamic Catalog Calculated from Live API -->
+    <section class="panel">
+      <h2>Live-Priced Everyday Collection</h2>
+      <div id="catalogGrid" class="catalog-grid"></div>
+    </section>
+
+    <!-- Validated Store Visit Form -->
+    <section class="panel">
+      <h2>Book a Store Visit or Custom Order</h2>
+      <form id="bookingForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="customerName">Full Name</label>
+            <input type="text" id="customerName" placeholder="Aarav Sharma" required>
+            <small id="nameError" class="error-msg"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="customerEmail">Email Address</label>
+            <input type="email" id="customerEmail" placeholder="aarav@example.com" required>
+            <small id="emailError" class="error-msg"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="customerPhone">10-Digit Mobile Number</label>
+            <input type="tel" id="customerPhone" maxlength="10" placeholder="9876543210" required>
+            <small id="phoneError" class="error-msg"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="metalPreference">Metal &amp; Purity Interest</label>
+            <select id="metalPreference" required>
+              <option value="">Select purity...</option>
+              <option value="Gold 22K">Gold 22K</option>
+              <option value="Gold 18K">Gold 18K</option>
+              <option value="Silver 925">Silver 925</option>
+              <option value="Platinum 950">Platinum 950</option>
+            </select>
+            <small id="metalError" class="error-msg"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="visitDate">Preferred Visit Date</label>
+            <input type="date" id="visitDate" required>
+            <small id="dateError" class="error-msg"></small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Confirm Studio Visit</button>
+        <div id="formSuccessBanner" class="success-banner" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Designed &amp; Developed by <strong>Param Varshney</strong> (B.Tech CSE, 2026)
+    </div>
+  </footer>
+
+</body>
+</html>

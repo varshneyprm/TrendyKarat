@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Param Varshney">
+  <meta name="description"
+    content="Trendy Karat — Wear the Asset. Gen Z everyday luxury jewellery priced transparently with live daily Gold, Silver, and Platinum bullion rates.">
+  <title>Trendy Karat — Wear the Asset | Live Gold, Silver &amp; Platinum Rates</title>
+
+  <!-- Matching SVG Data-URI Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 190'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23f0d394'/%3E%3Cstop offset='50%25' stop-color='%23c89b3c'/%3E%3Cstop offset='100%25' stop-color='%23996f22'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(10,10)' fill='none' stroke='url(%23g)' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='40,0 160,0 200,52 100,170 0,52'/%3E%3Cline x1='0' y1='52' x2='200' y2='52'/%3E%3Cpolyline points='40,0 62,52 100,0 138,52 160,0'/%3E%3Cline x1='100' y1='52' x2='100' y2='170'/%3E%3Cline x1='62' y1='52' x2='100' y2='170'/%3E%3Cline x1='138' y1='52' x2='100' y2='110'/%3E%3Cline x1='118' y1='82' x2='152' y2='110'/%3E%3C/g%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Syne (Headings) + Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Compiled Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+    defer></script>
+
+  <!-- Application Script -->
+  <script src="script.js" defer></script>
+</head>
+
+<body data-theme="ivory">
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#top" aria-label="Trendy Karat Home">
+        <svg class="brand-emblem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 190" width="34" height="30"
+          role="img" aria-label="Trendy Karat Diamond Emblem">
+          <defs>
+            <linearGradient id="tkNavGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f0d394" />
+              <stop offset="50%" stop-color="#c89b3c" />
+              <stop offset="100%" stop-color="#996f22" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(10, 10)" fill="none" stroke="url(#tkNavGold)" stroke-width="8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polygon points="40,0 160,0 200,52 100,170 0,52" />
+            <line x1="0" y1="52" x2="200" y2="52" />
+            <polyline points="40,0 62,52 100,0 138,52 160,0" />
+            <line x1="100" y1="52" x2="100" y2="170" />
+            <line x1="62" y1="52" x2="100" y2="170" />
+            <line x1="138" y1="52" x2="100" y2="110" />
+            <line x1="118" y1="82" x2="152" y2="110" />
+          </g>
+        </svg>
+        <span class="brand-wordmark">Trendy Karat</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#trendyNavbar"
+        aria-controls="trendyNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="trendyNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item">
+            <a class="nav-link" href="#live-rates">Live Rates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#collection">Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#book-visit">Book Visit</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <button id="themeToggleBtn" type="button" class="btn btn-ambience" aria-live="polite">
+            Ambience: Ivory Light
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+      <div class="container py-lg-3">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <!-- Required Inline CSS Touchpoint -->
+            <span class="d-inline-block mb-3"
+              style="color: #785312; font-size: 0.82rem; background-color: #f6e7c5; padding: 0.45rem 1rem; border-radius: 999px; font-weight: 700; letter-spacing: 0.03em;">
+              BIS 916 Hallmarked &bull; Live Daily Bullion Rates &bull; Zero Hidden Math
+            </span>
+
+            <p class="hero-motto mb-2">Wear the Asset</p>
+            <h1 class="hero-title mb-3">
+              Real Bullion. Everyday Fit. Full Receipt Energy.
+            </h1>
+            <p class="hero-subtitle mb-4">
+              Skip fast-fashion plating that fades in a month. Trendy Karat crafts minimalist 22K, 18K, 14K Gold, 925
+              Silver, and Pt950 Platinum pieces priced live against daily Indian bullion benchmarks—with every rupee of
+              metal, making, and GST broken down up front.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#collection" class="btn btn-gold btn-lg px-4">Explore Collection</a>
+              <a href="#live-rates" class="btn btn-outline-gold btn-lg px-4">Check Live Rates</a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <img class="hero-visual img-fluid"
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 420' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='520' y2='420' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%231c1917'/%3E%3Cstop offset='100%25' stop-color='%232e261e'/%3E%3C/linearGradient%3E%3ClinearGradient id='gold' x1='80' y1='40' x2='440' y2='380' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%23f7e2b2'/%3E%3Cstop offset='50%25' stop-color='%23c89b3c'/%3E%3Cstop offset='100%25' stop-color='%238c621d'/%3E%3C/linearGradient%3E%3ClinearGradient id='plat' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23f8fafc'/%3E%3Cstop offset='100%25' stop-color='%2394a3b8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='520' height='420' rx='28' fill='url(%23bg)'/%3E%3Ccircle cx='390' cy='95' r='110' fill='%23c89b3c' fill-opacity='0.12'/%3E%3Ccircle cx='120' cy='330' r='95' fill='%23f0d394' fill-opacity='0.08'/%3E%3Ccircle cx='260' cy='195' r='118' stroke='url(%23gold)' stroke-width='2' stroke-dasharray='6 8' opacity='0.55'/%3E%3Cellipse cx='260' cy='195' rx='84' ry='84' stroke='url(%23gold)' stroke-width='12'/%3E%3Cellipse cx='260' cy='195' rx='66' ry='66' stroke='%23f7e2b2' stroke-width='1.5' opacity='0.6'/%3E%3Cpolygon points='260,72 284,104 260,136 236,104' fill='url(%23plat)' stroke='%23ffffff' stroke-width='2'/%3E%3Crect x='36' y='32' width='158' height='48' rx='14' fill='%23121215' fill-opacity='0.82' stroke='%23c89b3c' stroke-opacity='0.45'/%3E%3Ctext x='54' y='53' fill='%23f0d394' font-family='sans-serif' font-size='11' font-weight='700' letter-spacing='1.2'%3EWEAR THE ASSET%3C/text%3E%3Ctext x='54' y='69' fill='%23e7e5e4' font-family='sans-serif' font-size='10'%3E916 Gold %E2%80%A2 925 Silver %E2%80%A2 Pt950%3C/text%3E%3Crect x='294' y='332' width='190' height='54' rx='14' fill='%23121215' fill-opacity='0.86' stroke='%23c89b3c' stroke-opacity='0.5'/%3E%3Ctext x='314' y='354' fill='%23a8a29e' font-family='sans-serif' font-size='10'%3ELIVE SPOT PRICING%3C/text%3E%3Ctext x='314' y='373' fill='%23f7e2b2' font-family='sans-serif' font-size='13' font-weight='700'%3ETransparent Breakdown%3C/text%3E%3C/svg%3E"
+              alt="Trendy Karat luxury gold ring and faceted diamond showcase graphic reading Wear the Asset">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live All-Metal Purity Rate Board -->
+    <section id="live-rates" class="rates-section py-5">
+      <div class="container">
+        <div class="rates-shell p-4 p-lg-5">
+          <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3 mb-3">
+            <div>
+              <span class="section-eyebrow">Live Bullion Desk</span>
+              <h2 class="section-title mt-1 mb-1">Today's All-Metal Purity Rates</h2>
+              <p class="rates-note mb-0">
+                IBJA-aligned daily bullion rates (Excl. GST &amp; Making Charges). Making charges &amp; 3% GST apply on
+                jewellery pieces.
+              </p>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center gap-2 rates-controls">
+              <span id="rateStatusBadge" class="badge status-badge">Connecting...</span>
+              <span id="rateTimestamp" class="rate-timestamp">Updating...</span>
+              <button id="refreshRatesBtn" type="button" class="btn btn-sm btn-outline-gold">
+                Refresh Rates
+              </button>
+            </div>
+          </div>
+
+          <!-- Metal Switcher Tabs -->
+          <ul class="nav nav-pills metal-tabs gap-2 mb-4" id="metalRateTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="gold-tab" data-bs-toggle="pill" data-bs-target="#gold-pane"
+                type="button" role="tab" aria-controls="gold-pane" aria-selected="true">
+                Gold (24K – 14K)
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="silver-tab" data-bs-toggle="pill" data-bs-target="#silver-pane" type="button"
+                role="tab" aria-controls="silver-pane" aria-selected="false">
+                Silver (999 – 800)
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="platinum-tab" data-bs-toggle="pill" data-bs-target="#platinum-pane"
+                type="button" role="tab" aria-controls="platinum-pane" aria-selected="false">
+                Platinum (999 – 900)
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="metalRateTabContent">
+            <div class="tab-pane fade show active" id="gold-pane" role="tabpanel" aria-labelledby="gold-tab"
+              tabindex="0">
+              <div id="goldRatesGrid" class="row g-3"></div>
+            </div>
+            <div class="tab-pane fade" id="silver-pane" role="tabpanel" aria-labelledby="silver-tab" tabindex="0">
+              <div id="silverRatesGrid" class="row g-3"></div>
+            </div>
+            <div class="tab-pane fade" id="platinum-pane" role="tabpanel" aria-labelledby="platinum-tab" tabindex="0">
+              <div id="platinumRatesGrid" class="row g-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Jewellery Collection -->
+    <section id="collection" class="collection-section py-5">
+      <div class="container">
+        <div class="d-flex flex-column flex-lg-row align-items-lg-end justify-content-between gap-3 mb-4">
+          <div>
+            <span class="section-eyebrow">Curated Drops</span>
+            <h2 class="section-title mt-1 mb-1">Everyday Luxury Collection</h2>
+            <p class="section-subtitle mb-0">
+              Every piece recalculates automatically from today's live purity rate. Click any item to audit the full
+              receipt.
+            </p>
+          </div>
+
+          <div class="catalog-controls d-flex flex-wrap align-items-center gap-2">
+            <div class="btn-group filter-group" role="group" aria-label="Filter collection by metal">
+              <button type="button" class="btn btn-filter active" data-metal-filter="all">All</button>
+              <button type="button" class="btn btn-filter" data-metal-filter="gold">Gold</button>
+              <button type="button" class="btn btn-filter" data-metal-filter="silver">Silver</button>
+              <button type="button" class="btn btn-filter" data-metal-filter="platinum">Platinum</button>
+            </div>
+
+            <select id="catalogSort" class="form-select sort-select" aria-label="Sort jewellery collection">
+              <option value="price-asc" selected>Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="weight-asc">Weight: Light to Heavy</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="catalogGrid" class="row g-4"></div>
+      </div>
+    </section>
+
+    <!-- Book Store Visit / Custom Order Form -->
+    <section id="book-visit" class="booking-section py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="booking-card p-4 p-md-5">
+              <div class="mb-4">
+                <span class="section-eyebrow">Private Studio &amp; Custom Sizing</span>
+                <h2 class="section-title mt-1 mb-2">Book a Store Visit or Custom Order</h2>
+                <p class="section-subtitle mb-0">
+                  Lock in today's bullion rate at our Aligarh studio or request a custom karat, engraving, or ring size.
+                </p>
+              </div>
+
+              <form id="bookingForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="customerName" class="form-label fw-semibold">Full Name</label>
+                    <input type="text" id="customerName" name="customerName" class="form-control"
+                      placeholder="Aarav Sharma" autocomplete="name" required>
+                    <div id="nameError" class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="customerEmail" class="form-label fw-semibold">Email Address</label>
+                    <input type="email" id="customerEmail" name="customerEmail" class="form-control"
+                      placeholder="aarav@example.com" autocomplete="email" required>
+                    <div id="emailError" class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="customerPhone" class="form-label fw-semibold">10-Digit Mobile Number</label>
+                    <input type="tel" id="customerPhone" name="customerPhone" class="form-control"
+                      placeholder="9876543210" maxlength="10" inputmode="numeric" required>
+                    <div id="phoneError" class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="metalPreference" class="form-label fw-semibold">Metal &amp; Purity Interest</label>
+                    <select id="metalPreference" name="metalPreference" class="form-select" required>
+                      <option value="">Select purity...</option>
+                      <option value="Gold 22K">Gold 22K</option>
+                      <option value="Gold 18K">Gold 18K</option>
+                      <option value="Gold 14K">Gold 14K</option>
+                      <option value="Silver 925">Silver 925</option>
+                      <option value="Silver 999">Silver 999</option>
+                      <option value="Platinum 950">Platinum 950</option>
+                    </select>
+                    <div id="metalError" class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="visitDate" class="form-label fw-semibold">Preferred Visit Date</label>
+                    <input type="date" id="visitDate" name="visitDate" class="form-control" required>
+                    <div id="dateError" class="invalid-feedback"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="customNote" class="form-label fw-semibold">Optional Custom Note</label>
+                    <textarea id="customNote" name="customNote" class="form-control" rows="3"
+                      placeholder="Ring size, chain length, engraving idea, or specific piece you want to try on..."></textarea>
+                  </div>
+                </div>
+
+                <div class="mt-4 d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3">
+                  <small class="form-hint">Zero obligation. Instant appointment confirmation.</small>
+                  <button type="submit" class="btn btn-gold btn-lg px-4">
+                    Confirm Studio Visit
+                  </button>
+                </div>
+
+                <div id="formSuccessBanner" class="mt-4" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Price Breakdown Modal -->
+  <div class="modal fade" id="priceBreakdownModal" tabindex="-1" aria-labelledby="modalItemName" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span id="modalItemMeta" class="badge badge-metal-meta mb-1">Metal &bull; Purity</span>
+            <h3 class="modal-title h5 mb-0" id="modalItemName">Jewellery Piece</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="breakdown-list">
+            <div class="breakdown-row">
+              <span>Net Weight</span>
+              <strong id="modalItemWeight">—</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Live Purity Rate (Per 1g)</span>
+              <strong id="modalRatePerGram">—</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Base Metal Value</span>
+              <strong id="modalMetalValue">—</strong>
+            </div>
+            <div class="breakdown-row">
+              <span id="modalMakingLabel">Making Charges</span>
+              <strong id="modalMakingCharges">—</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>GST (3%)</span>
+              <strong id="modalGstAmount">—</strong>
+            </div>
+            <div class="breakdown-row breakdown-total">
+              <span>Final Estimated Price</span>
+              <strong id="modalFinalPrice">—</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer justify-content-between flex-wrap gap-2">
+          <button type="button" id="modalCopyQuoteBtn" class="btn btn-outline-gold">
+            Copy Quote
+          </button>
+          <button type="button" class="btn btn-gold" data-bs-dismiss="modal">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start justify-content-between">
+        <div class="col-md-6">
+          <h3 class="h5 fw-bold mb-1">Trendy Karat &mdash; Wear the Asset</h3>
+          <p class="footer-muted mb-1">Aligarh, Uttar Pradesh, India</p>
+          <p class="footer-muted mb-0 small">
+            Showroom Desk:
+            <a href="mailto:showroom@trendykarat.example">showroom@trendykarat.example</a>
+          </p>
+        </div>
+
+        <div class="col-md-6 text-md-end">
+          <p class="mb-2">
+            Designed &amp; Developed by <strong>Param Varshney</strong> (B.Tech CSE, 2026)
+          </p>
+          <ul class="list-inline mb-0 footer-links">
+            <li class="list-inline-item">
+              <a href="mailto:varshneyprm@gmail.com">Email</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/varshneyprm" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://linkedin.com/in/varshneyprm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
