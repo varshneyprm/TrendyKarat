@@ -22,15 +22,13 @@ This system was architected and implemented as the capstone deliverable for the 
 ## 2. Host Organization & Internship Program Governance
 
 ### 2.1 Host Organization Profile — Cognifyz Technologies
-
-* **Entity:** Cognifyz Technologies [MSME Registered Technology & Data Science Enterprise](cite: 2)
+* **Entity:** Cognifyz Technologies (MSME Registered Technology & Data Science Enterprise)[cite: 2]
 * **Core Operational Domains:** Artificial Intelligence (AI), Machine Learning (ML), Data Analytics Platforms, Enterprise Software Solutions, and Industry Technical Training[cite: 2]
 * **Program Track:** Front-End Web Development Internship Program[cite: 1, 6]
 * **Minimum Certification Threshold:** Completion of at least **6 of 8** technical tasks across four progressive engineering tiers[cite: 6]
 * **Achieved Deliverable Scope:** **8 of 8** technical tasks completed, verified, and packaged into both incremental progression snapshots (`Level-1/` – `Level-4/`) and a unified production codebase (`Complete Website/`)
 
 ### 2.2 Program Compliance & Engineering Standards
-
 * **Incremental Architecture Versioning:** Maintained isolated, self-contained builds for every difficulty tier (`Beginner`, `Intermediate`, `Advanced`, `Expert`) to provide auditable engineering progression[cite: 5, 7, 9, 11, 13, 32].
 * **Academic Integrity & Original Engineering:** Engineered entirely from first principles with bespoke visual assets (inline vector `SVG` emblems, product illustrations, and favicon data URIs), custom domain logic, and zero plagiarized templates[cite: 4, 24].
 * **Community & Technical Demonstration:** Documented via a public demonstration showcase on LinkedIn tagging **Cognifyz Technologies** (`#cognifyz`, `#cognifyzTech`, `#cognifyzTechnologies`) prior to final artifact submission[cite: 4, 5].
@@ -40,13 +38,11 @@ This system was architected and implemented as the capstone deliverable for the 
 ## 3. System Architecture & Functional Capabilities
 
 ### 3.1 Asynchronous Commodity Telemetry & Resilience Layer
-
 * **Concurrent Multi-Asset Fetching:** Utilizes `Promise.all()` with native browser `fetch()` calls against unauthenticated, CORS-enabled `JSON` endpoints (`https://api.gold-api.com/price/{XAU|XAG|XPT}/INR`) to minimize network waterfall latency[cite: 21].
 * **Rate-Limiting & Debounced Refresh Governance:** Implements a deterministic **5-second UI cooldown timer** (`REFRESH_COOLDOWN_MS = 5000`) on `#refreshRatesBtn` with live countdown state feedback to prevent upstream API throttling[cite: 21].
 * **Fault-Tolerant Circuit Fallback:** Wraps network I/O in structured `try/catch` exception handling with HTTP status verification and `Number.isFinite()` payload guards[cite: 21]. Upon network degradation, the engine seamlessly degrades to calibrated Indian benchmark spot values (`FALLBACK_SPOT_INR`) and transitions `#rateStatusBadge` between `Live Market` and `Offline Benchmark` states[cite: 21].
 
 ### 3.2 IBJA-Aligned Bullion & BIS Hallmark Calculation Engine
-
 To mirror India Bullion and Jewellers Association (IBJA) wholesale display standards—quoting pure bullion rates **excluding GST and making charges** while embedding retail operating spreads—the calculation pipeline executes a three-stage deterministic algorithm[cite: 21, 24]:
 
 1. **Troy-Ounce Normalization & Indian Customs Landed Factor:**
@@ -61,13 +57,11 @@ To mirror India Bullion and Jewellers Association (IBJA) wholesale display stand
    * **Platinum (Whole-Rupee `1g` & `10g` Precision):** `999 Pure (1.000)`, `Pt950 (0.950)`, and `Pt900 (0.900)`[cite: 21].
 
 ### 3.3 Dynamic Catalog, Client-Side Filtering & Receipt Audit Modal
-
 * **State-Driven Catalog Pipeline:** Renders 9 curated everyday luxury SKUs (`CATALOG_ITEMS`) with real-time category filtering (`All`, `Gold`, `Silver`, `Platinum`) and multi-criteria sorting (`price-asc`, `price-desc`, `weight-asc`)[cite: 21, 24].
 * **Line-Item Invoice Reconciliation:** Computes `metalValue`, `makingCharges`, `gstAmount` (3% Indian Jewellery GST), and `finalPrice` using integer rounding at each line item so itemized components reconcile to the exact rupee inside `#priceBreakdownModal`[cite: 21].
 * **Asynchronous Clipboard Integration:** Generates structured plain-text quotation summaries via `navigator.clipboard.writeText()` (with a legacy `textarea` fallback) for instant customer sharing[cite: 21].
 
 ### 3.4 Multi-Surface Design System & Client-Side Form Validation
-
 * **3-Tier Ambience Engine:** Dynamically mutates `document.body` styles, custom `data-theme` attributes, and Bootstrap's `data-bs-theme` root attribute across **Ivory Light**, **Champagne Warm**, and **Royal Velvet (Dark)** with `localStorage` state persistence[cite: 21].
 * **Modular Sass Architecture:** Leverages SCSS variables (`$gold-primary`, `$ivory-bg`, `$champagne-bg`, `$velvet-bg`), parameterized mixins (`@mixin card-hover-lift`, `@mixin theme-surface`), and nested component rules compiled into zero-dependency CSS3[cite: 23].
 * **Timezone-Safe Input Validation:** Validates full names (`RegExp` alphabetic check), RFC-compliant email syntax, 10-digit Indian mobile numbers (`^[6-9]\d{9}$`), metal selection, and local `YYYY-MM-DD` appointment dates to prevent UTC midnight off-by-one boundary defects[cite: 21].
